@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Montserrat', sans-serif;
+    @apply bg-gradient-to-br from-sky-50 to-white;
+  }
+}
+
+@layer components {
+  .nav-link {
+    @apply relative px-4 py-2 text-sm tracking-wider transition-colors duration-300
+           after:absolute after:left-0 after:bottom-0 after:h-0.5 after:w-0
+           after:bg-sky-300 after:transition-all after:duration-300
+           hover:text-sky-500 hover:after:w-full;
+  }
+
+  .section-title {
+    @apply font-serif text-4xl md:text-5xl text-center mb-12 text-neutral-800
+           relative pb-6 after:absolute after:bottom-0 after:left-1/2
+           after:-translate-x-1/2 after:w-24 after:h-0.5 after:bg-sky-300;
+  }
+
+  .card {
+    @apply bg-white/80 backdrop-blur-sm rounded-2xl shadow-lg
+           transition-all duration-300 hover:shadow-xl
+           border border-sky-50;
+  }
+}
+
+.swiper-pagination-bullet-active {
+  @apply bg-sky-400 !important;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  @apply text-sky-400 !important;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Montserrat', sans-serif;
+    @apply bg-gradient-to-br from-sky-50 to-white;
+  }
+}
+
+@layer components {
+  .nav-link {
+    @apply relative px-4 py-2 text-sm tracking-wider transition-colors duration-300
+           after:absolute after:left-0 after:bottom-0 after:h-0.5 after:w-0
+           after:bg-white after:transition-all after:duration-300
+           hover:after:w-full;
+  }
+
+  .section-title {
+    @apply font-serif text-4xl md:text-5xl text-center mb-12 text-neutral-800
+           relative pb-6 after:absolute after:bottom-0 after:left-1/2
+           after:-translate-x-1/2 after:w-24 after:h-0.5 after:bg-sky-300;
+  }
+
+  .card {
+    @apply bg-white/80 backdrop-blur-sm rounded-2xl shadow-lg
+           transition-all duration-300 hover:shadow-xl
+           border border-sky-50;
+  }
+}
+
+.swiper-pagination-bullet-active {
+  @apply bg-sky-400 !important;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  @apply text-sky-400 !important;
+}
+
+@keyframes loading {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.animate-loading-bar {
+  animation: loading 1.5s infinite;
+}
+
+
+/* Remove o cursor de texto (caret) de todos os elementos */
+* {
+  user-select: none; /* Desativa a seleção de texto */
+}
+
+input, textarea, select, button {
+  caret-color: transparent; /* Faz o cursor de texto desaparecer */
+}
+
